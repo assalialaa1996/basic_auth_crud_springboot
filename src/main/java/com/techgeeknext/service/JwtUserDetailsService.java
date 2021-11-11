@@ -36,4 +36,8 @@ public class JwtUserDetailsService implements UserDetailsService {
 		newUser.setPassword(bcryptEncoder.encode(user.getPassword()));
 		return userDao.save(newUser);
 	}
+
+	public <Optional> java.util.Optional<UserDao> findById(Long id) {
+		return userDao.findById(id);
+	}
 }

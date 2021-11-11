@@ -14,6 +14,14 @@ public class DigitCardDao {
     @Column
     private String cardNumber;
 
+    public UserDao getUser() {
+        return user;
+    }
+
+    public void setUser(UserDao user) {
+        this.user = user;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "user_id", nullable = true)
     private UserDao user;

@@ -20,7 +20,9 @@ public class DigitCardService implements DigitCardRepository {
         return null;
     }
 
-
+    public Iterable<DigitCardDao> findByUser(UserDao user){
+        return this.digitCardRepository.findByUser(user);
+    }
     public DigitCardDao save(DigiCardDto card){
 
         DigitCardDao digitCardDao= new DigitCardDao();
